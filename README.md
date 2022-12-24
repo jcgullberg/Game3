@@ -1,2 +1,2 @@
-# Game2
-Rachel, Jane, Iurii
+# Game3
+James, Tian, Decker
