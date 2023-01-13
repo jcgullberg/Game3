@@ -29,19 +29,19 @@ import javax.swing.SwingUtilities;
 
 import game.MainGame.DrawingPanel;
 
-public class Walls implements ActionListener {
+public class TankGame implements ActionListener {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				new Walls(); 
+				new TankGame(); 
 			}
 		});		
     }
 
     final static int PANW = 500;
 	final static int PANH = 400;
-	final static int TIMERSPEED = 1;
+	final static int TIMERSPEED = 5;
 
     /***** instance variables (global) *****/
 	DrawingPanel drPanel = new DrawingPanel();
@@ -65,7 +65,7 @@ public class Walls implements ActionListener {
 
     class Ball extends Rectangle{
 		// int x,y;	//position
-		int vx, vy;	//speed
+		int vx, vy = 1;	//speed
 		int size = 10;
 
 		Ball(int x, int y, int vx, int vy){
@@ -104,7 +104,7 @@ public class Walls implements ActionListener {
     Ball b1 = new Ball(200,300,3,2);
     Wall w1 = new Wall(200,200, true);
 
-    Walls() {
+    TankGame() {
 		createAndShowGUI();
 		startTimer();
 
